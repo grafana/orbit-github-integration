@@ -11,7 +11,7 @@ ORBIT_TOKEN = config("ORBIT_TOKEN", default="")
 GITHUB_ORG_NAME = config("GITHUB_ORG_NAME", default="")
 GITHUB_REPO_NAME_CONTAINS = config("GITHUB_REPO_NAME_CONTAINS", default="")
 GITHUB_TOKEN = config("GITHUB_TOKEN", default="")
-ENLAPSED_TIME = config("ENLAPSED_TIME", default=1, cast=int)
+MAX_EVENT_AGE = config("MAX_EVENT_AGE", default=1, cast=int)
 
 logger = getLogger("orbit_github")
 
@@ -234,7 +234,7 @@ if __name__ == "__main__":
 
         for e in repo.get_events():
             if e.created_at < datetime.datetime.now() - datetime.timedelta(
-                hours=ENLAPSED_TIME
+                hours=MAX_EVENT_AGE
             ):
                 logger.info(
                     f"No more events", extra={"context": {"repository": e.repo.name}}

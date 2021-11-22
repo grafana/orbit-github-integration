@@ -21,7 +21,7 @@ GITHUB_TOKEN=your-github-token-goes-here
 
 # Optional
 GITHUB_REPO_NAME_CONTAINS=string-to-match-repositories-with # Default: ""
-ENLAPSED_TIME=10 # Default: 1 (hour)
+MAX_EVENT_AGE=10 # Default: 1 (hour)
 ```
 
 Install the requirements with:
