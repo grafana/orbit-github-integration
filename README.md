@@ -8,7 +8,7 @@ Requirements:
 - An Orbit account/workspace
 - A GitHub account
 
-To run **orbit-github** locally, you've to create a `.env` file like this one:
+To run **orbit-github** locally, you need to create a `.env` file like this one:
 
 ```sh
 $ cat .env
