@@ -1,6 +1,12 @@
 # orbit-github-integration
 Integration between Orbit and GitHub.
 
+Orbit offers a GitHub integration, but that integration only supports sending data from one (GitHub) _organisation_ to one (Orbit) _workspace_. If your repository, or repositories, fall under an organisation that already uses Orbit's integration, you won't be able to also send data to your workspace. 
+
+If you manage multiple communities under one organisation you run into the same issue.
+
+This integration uses the GitHub API to search GitHub for public repos with whatever attributes you specify, and fetches all the recent events for each one of them.
+
 ## Quickstart
 
 Requirements:
